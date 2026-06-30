@@ -20,7 +20,8 @@ RUN ln -sf /usr/local/bin/python3.13 /usr/local/bin/python3 && \
 RUN uv tool install --python=3.13 aws-sam-cli && \
     uv tool install --python=3.13 poetry && \
     uv tool install --python=3.13 checkov && \
-    uv tool install --python=3.13 pre-commit
+    uv tool install --python=3.13 pre-commit && \
+    uv tool install --python=3.13 podman-compose
 
 RUN mkdir -p /dist/usr/local /dist/usr/share && \
     mv /usr/local/bin /dist/usr/local && \
