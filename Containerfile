@@ -10,7 +10,7 @@ ENV UV_PYTHON_INSTALL_DIR=/usr/share/uv/python \
     UV_TOOL_BIN_DIR=/usr/local/bin \
     UV_PYTHON_BIN_DIR=/usr/local/bin
 
-COPY --from=ghcr.io/astral-sh/uv:0.11.21 /uv /usr/local/bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.11.31 /uv /usr/local/bin/uv
 
 RUN uv python install "${PYTHON_3_11_VERSION}" "${PYTHON_3_12_VERSION}" "${PYTHON_3_13_VERSION}" "${PYTHON_3_14_VERSION}"
 
